@@ -12,7 +12,9 @@ class ToTime {
             }
             else {
                 time.minutes += minutes
-                return `${time.hours}:${time.minutes}`
+                let hoursFormated = ('00' + time.hours).slice(-2)
+                let minutesFormated = ('00' + time.minutes).slice(-2)
+                return `${hoursFormated}:${minutesFormated}`
             }
         }
         return handle(minutes)
@@ -37,10 +39,13 @@ class ToTime {
             }
             else {
                 time.seconds += seconds
+                let hoursFormated = ('00' + time.hours).slice(-2)
+                let minutesFormated = ('00' + time.minutes).slice(-2)
+                let secondsFormated = ('00' + time.seconds).slice(-2)
                 if(time.seconds > 0) {
-                    return `${time.hours}:${time.minutes}:${time.seconds}`
+                    return `${hoursFormated}:${minutesFormated}:${secondsFormated}`
                 } else {
-                    return `${time.hours}:${time.minutes}`
+                    return `${hoursFormated}:${minutesFormated}`
                 }
             }
         }
@@ -60,11 +65,13 @@ class ToTime {
             }
             else {
                 time.seconds += seconds
+                let minutesFormated = ('00' + time.minutes).slice(-2)
+                let secondsFormated = ('00' + time.seconds).slice(-2)
                 if(time.seconds > 0) {
-                    return `${time.minutes}.${time.seconds}`
+                    return `${minutesFormated}.${secondsFormated}`
                 }
                 else {
-                    return `${time.minutes}`
+                    return `${minutesFormated}`
                 }
             }
         }
