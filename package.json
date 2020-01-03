@@ -1,12 +1,13 @@
 {
-  "name": "totime",
+  "name": "@clebertsfigueiredo/totime",
   "version": "0.0.1",
   "description": "Minutes, seconds to Hours and inverse. Time interval.",
-  "main": "ToTime.js",
+  "main": "totime.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clebertsilva28/ToTime.git"
   },
+  "private": false,
   "keywords": [
     "totime",
     "minutesToHours",
