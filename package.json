@@ -1,11 +1,15 @@
 {
   "name": "@clebertsfigueiredo/totime",
-  "version": "0.0.2",
-  "description": "Minutes, seconds to Hours and inverse. Time interval.",
-  "main": "totime.js",
+  "version": "0.0.3",
+  "description": "This is a time conversion package.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clebertsilva28/ToTime.git"
+    "url": "git+https://github.com/clebertsfigueiredo/ToTime.git"
   },
   "private": false,
   "keywords": [
@@ -15,16 +19,24 @@
     "parseSeconds",
     "parseHours",
     "time",
-    "interval"
+    "interval",
+    "conversion"
   ],
   "author": {
     "name": "Clebert Figueiredo",
     "email": "cleberts.figueiredo@outlook.com",
-    "url": "https://github.com/clebertsilva28"
+    "url": "https://github.com/clebertsfigueiredo"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/clebertsilva28/ToTime/issues"
+    "url": "https://github.com/clebertsfigueiredo/ToTime/issues"
   },
-  "homepage": "https://github.com/clebertsilva28/ToTime#readme"
+  "homepage": "https://github.com/clebertsfigueiredo/ToTime#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^25.4.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  }
 }
