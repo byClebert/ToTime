@@ -1,75 +1,63 @@
 # ToTime
-ToTime é um pacote para conversão de hora em minutos, segundos ou o inverso. Além disso, é possível obter o intervalo entre um período e outro.
+This is a time conversion package.
 
-## Transformar minutos em horas
-Através to método `setMinutesToHours(minutes)` é possível obter as horas e minutos em formato String `'20:22'`.
-Exemplo:
+![](https://img.shields.io/github/license/clebertsfigueiredo/totime)
+![](https://img.shields.io/npm/v/@clebertsfigueiredo/totime)
+![](https://img.shields.io/github/repo-size/clebertsfigueiredo/totime)
+![](https://img.shields.io/npm/dt/@clebertsfigueiredo/totime)
+
+
+### INSTALL
 ```
-const totime = require('totime')
-
-let minutos = 1092
-
-let horas = totime.setMinutesToHours(minutos)
+npm i @clebertsfigueiredo/totime
 ```
-No exemplo acima, a variável 'horas' agora possui o valor: '18:12'.
 
-## Transformar segundos em horas
-Através do método `setSecondsToHours(seconds)` é possível obter as horas, minutos e segundos em formato String `'20:22:10'`.
-Exemplo:
+### IMPORT
+```js
+const totime = require('@clebertsfigueiredo/totime')
+// or
+import totime from '@clebertsfigueiredo/totime'
 ```
-const totime = require('totime')
 
-let segundos = 50400
+### USE
+```js
+const { minutesToHours } = require('@clebertsfigueiredo/totime')
 
-let horas = totime.setSecondsToHours(segundos)
+const response = minutesToHours(85)
+
+console.log(response) // '01:25'
+
 ```
-No exemplo acima, a variável 'horas' agora possui o valor: '14:0:0'.
 
-## Transformar segundos em minutos
-Através do método `setSecondsToMinutes(seconds)` é possível obter os minutos em formato String `'999.59'`. Obs.: Depois do . (ponto) ficam os segundos.
-Exemplo:
+### METHODS
+```js
+const {
+    intervalInMinutes,
+    minutesToHours,
+    secondsToHours,
+    secondsToMinutes,
+    timeToMinutes,
+    timeToSeconds 
+} = require('@clebertsfigueiredo/totime')
+
+// Gets the interval in minutes
+intervalInMinutes('14:10', '14:30') // Output: 20
+
+// Transform minutes into hours
+minutesToHours(125) // Output: '02:05'
+
+// Transform seconds into hours
+secondsToHours(10860) // Output: '03:01'
+secondsToHours(14465) // Output: '04:01:05'
+
+// Transform seconds into minutes
+secondsToMinutes(60) // Output: '01' **minutes
+secondsToMinutes(75) // Output: 01:15 **PS.: <minutes>:<seconds>, does not return the time
+
+// Transform time to minutes
+timeToMinutes('02:00') // Output: 120
+
+// Transform time to seconds
+timeToSeconds('02:00') // Output: 7200
+
 ```
-const totime = require('totime')
-
-let segundos = 36025
-
-let minutos = totime.setSecondsToMinutes(segundos)
-```
-No exemplo acima, a variável 'minutos' agora possui o valor: '600.25'.
-
-
-## Transformar horas em minutos
-Través do método `getMinutes(time)` é possível obter a quantidade de minutos em formato numérico (Int). Exemplo:
-```
-const totime = require('totime')
-
-let horas = "20:30"
-
-let minutos = totime.getMinutes(horas)
-```
-No exemplo acima, a variável 'minutos' agora possui o valor: 1230
-
-
-## Transformar horas em segundos
-Través do método `getSeconds(time)` é possível obter a quantidade de segundos em formato numérico (Int). Exemplo:
-```
-const totime = require('totime')
-
-let horas = "20:30"
-
-let segundos = totime.getMinutes(horas)
-```
-No exemplo acima, a variável 'segundos' agora possui o valor: 73800
-
-
-## Obter intervalo entre horas
-Través do método `getInterval(timeStart, timeEnd)` é possível obter o intervalo de tempo em minutos entre `timeStart` e `timeEnd` em formato numérico (Int). Obs.: `timeStart` deve ser menor do que `timeEnd`. Exemplo:
-```
-const totime = require('totime')
-
-let tempo1 = "20:30"
-let tempo2 = "21:00"
-
-let intervalo = getInterval(tempo1, tempo2)
-```
-No exemplo acima, a variável 'intervalo' agora possui o valor: 60
