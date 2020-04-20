@@ -1,15 +1,10 @@
 # ToTime
 This is a time conversion package.
 
-<img src="https://img.shields.io/github/license/clebertsfigueiredo/totime">
-<img src="https://img.shields.io/npm/v/@clebertsfigueiredo/totime">
-<img src="https://img.shields.io/github/repo-size/clebertsfigueiredo/totime">
-<img src="https://img.shields.io/npm/dt/@clebertsfigueiredo/totime">
-
-<!-- ![](https://img.shields.io/github/license/clebertsfigueiredo/totime)
+![](https://img.shields.io/github/license/clebertsfigueiredo/totime)
 ![](https://img.shields.io/npm/v/@clebertsfigueiredo/totime)
 ![](https://img.shields.io/github/repo-size/clebertsfigueiredo/totime)
-![](https://img.shields.io/npm/dt/@clebertsfigueiredo/totime) -->
+![](https://img.shields.io/npm/dt/@clebertsfigueiredo/totime)
 
 
 ### INSTALL
